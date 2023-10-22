@@ -1,6 +1,12 @@
 # Flutter Project Handbook
 Flutterプロジェクトに関連する参考記事やソースコード、コマンドについてまとめる
 
+## ローカルDB
+
+### isar
+- [isar](https://pub.dev/packages/isar)
+- [【Flutter】ローカル DB パッケージの Isar Database の使い方](https://zenn.dev/flutteruniv_dev/articles/20220607-061331-flutter-isar)
+
 ## FVM
 
 ### 参考記事
