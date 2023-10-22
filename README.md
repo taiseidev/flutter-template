@@ -1,16 +1,30 @@
 # flutter_template
 
-A new Flutter project.
+複数のアプリ開発を通してFlutterのスキルアップを目指すプロジェクト
 
-## Getting Started
+## 作りたいアプリ
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. **ToDoリストアプリ**:
+    - 学べるスキル: 基本的なUIの構築、データベースの操作、CRUD操作
+2. **天気アプリ**:
+    - 学べるスキル: APIの利用、非同期処理、JSONの解析
+3. **チャットアプリ**:
+    - 学べるスキル: ソケット通信、リアルタイムデータの同期、認証とセキュリティ
+4. **ニュースアグリゲータ**:
+    - 学べるスキル: Webスクレイピング、APIの利用、データのフィルタリングと整理
+5. **レシピ検索アプリ**:
+    - 学べるスキル: APIの利用、画像の表示、ユーザーの入力の処理
+6. **旅行プランナーアプリ**:
+    - 学べるスキル: カレンダーの統合、位置情報サービス、外部APIの統合
+7. **費用トラッカー**:
+    - 学べるスキル: データベースの操作、グラフやチャートの表示、ユーザー入力の検証
+8. **ゲーム（例：テトリス、スネーク）**:
+    - 学べるスキル: ゲームロジック、アニメーション、ユーザーインタラクション
+9. **Eコマースアプリ**:
+    - 学べるスキル: ショッピングカートの管理、オンライン決済の統合、製品の検索とフィルタリング
+10. **音楽プレイヤーアプリ**:
+- 学べるスキル: オーディオの再生と制御、ファイルシステムの操作、プレイリストの管理
+1. **ランダムジョークジェネレータ**:
+- 学べるスキル: APIの利用、シンプルなUIの構築、ユーザーのインタラクション
+1. **フィットネストラッキングアプリ**:
+- 学べるスキル: センサーデータの取得、データの可視化、目標設定と進捗の追跡
