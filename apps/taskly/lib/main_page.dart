@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
+import 'package:taskly/features/todo/presentation/pages/todo_list_page.dart';
 
 part 'main_page.g.dart';
 
@@ -16,7 +17,7 @@ class MainPage extends ConsumerWidget {
   const MainPage({super.key});
 
   static const _pages = [
-    Text('タスク'),
+    TodoListPage(),
     Text('設定'),
   ];
 
@@ -37,11 +38,9 @@ class MainPage extends ConsumerWidget {
       resizeToAvoidBottomInset: false,
       // TODO(taisei): 共通のAppBarを作成する
       appBar: AppBar(title: Text('タスク')),
-      body: Center(
-        child: IndexedStack(
-          index: ref.watch(tabIndexStateProvider),
-          children: _pages,
-        ),
+      body: IndexedStack(
+        index: ref.watch(tabIndexStateProvider),
+        children: _pages,
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: _items,
