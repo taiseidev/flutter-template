@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import 'package:taskly/features/todo/presentation/pages/todo_list_page.dart';
+import 'package:taskly/presentation/pages/todo_list_page.dart';
 
 part 'main_page.g.dart';
 

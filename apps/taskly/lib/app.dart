@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:taskly/shared/main_page.dart';
+import 'package:taskly/presentation/main_page.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
