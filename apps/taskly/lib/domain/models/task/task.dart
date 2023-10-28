@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:taskly/domain/models/category/categories.dart';
 import 'package:taskly/domain/models/task/task_title.dart';
 
 part 'task.freezed.dart';
@@ -20,6 +21,9 @@ class Task with _$Task {
 
     /// 説明
     required String description,
+
+    /// カテゴリ一覧
+    Categories? categories,
 
     /// 期限日
     String? dueDate,

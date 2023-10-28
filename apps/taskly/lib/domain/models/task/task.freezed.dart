@@ -25,6 +25,9 @@ mixin _$Task {
   /// 説明
   String get description => throw _privateConstructorUsedError;
 
+  /// カテゴリ一覧
+  Categories? get categories => throw _privateConstructorUsedError;
+
   /// 期限日
   String? get dueDate => throw _privateConstructorUsedError;
 
@@ -50,12 +53,14 @@ abstract class $TaskCopyWith<$Res> {
       {int id,
       TaskTitle title,
       String description,
+      Categories? categories,
       String? dueDate,
       TaskStatus status,
       DateTime createdAt,
       DateTime updatedAt});
 
   $TaskTitleCopyWith<$Res> get title;
+  $CategoriesCopyWith<$Res>? get categories;
 }
 
 /// @nodoc
@@ -74,6 +79,7 @@ class _$TaskCopyWithImpl<$Res, $Val extends Task>
     Object? id = null,
     Object? title = null,
     Object? description = null,
+    Object? categories = freezed,
     Object? dueDate = freezed,
     Object? status = null,
     Object? createdAt = null,
@@ -92,6 +98,10 @@ class _$TaskCopyWithImpl<$Res, $Val extends Task>
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String,
+      categories: freezed == categories
+          ? _value.categories
+          : categories // ignore: cast_nullable_to_non_nullable
+              as Categories?,
       dueDate: freezed == dueDate
           ? _value.dueDate
           : dueDate // ignore: cast_nullable_to_non_nullable
@@ -118,6 +128,18 @@ class _$TaskCopyWithImpl<$Res, $Val extends Task>
       return _then(_value.copyWith(title: value) as $Val);
     });
   }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CategoriesCopyWith<$Res>? get categories {
+    if (_value.categories == null) {
+      return null;
+    }
+
+    return $CategoriesCopyWith<$Res>(_value.categories!, (value) {
+      return _then(_value.copyWith(categories: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -131,6 +153,7 @@ abstract class _$$TaskImplCopyWith<$Res> implements $TaskCopyWith<$Res> {
       {int id,
       TaskTitle title,
       String description,
+      Categories? categories,
       String? dueDate,
       TaskStatus status,
       DateTime createdAt,
@@ -138,6 +161,8 @@ abstract class _$$TaskImplCopyWith<$Res> implements $TaskCopyWith<$Res> {
 
   @override
   $TaskTitleCopyWith<$Res> get title;
+  @override
+  $CategoriesCopyWith<$Res>? get categories;
 }
 
 /// @nodoc
@@ -153,6 +178,7 @@ class __$$TaskImplCopyWithImpl<$Res>
     Object? id = null,
     Object? title = null,
     Object? description = null,
+    Object? categories = freezed,
     Object? dueDate = freezed,
     Object? status = null,
     Object? createdAt = null,
@@ -171,6 +197,10 @@ class __$$TaskImplCopyWithImpl<$Res>
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String,
+      categories: freezed == categories
+          ? _value.categories
+          : categories // ignore: cast_nullable_to_non_nullable
+              as Categories?,
       dueDate: freezed == dueDate
           ? _value.dueDate
           : dueDate // ignore: cast_nullable_to_non_nullable
@@ -198,6 +228,7 @@ class _$TaskImpl extends _Task {
       {required this.id,
       required this.title,
       required this.description,
+      this.categories,
       this.dueDate,
       this.status = TaskStatus.inCompleted,
       required this.createdAt,
@@ -215,6 +246,10 @@ class _$TaskImpl extends _Task {
   /// 説明
   @override
   final String description;
+
+  /// カテゴリ一覧
+  @override
+  final Categories? categories;
 
   /// 期限日
   @override
@@ -235,7 +270,7 @@ class _$TaskImpl extends _Task {
 
   @override
   String toString() {
-    return 'Task(id: $id, title: $title, description: $description, dueDate: $dueDate, status: $status, createdAt: $createdAt, updatedAt: $updatedAt)';
+    return 'Task(id: $id, title: $title, description: $description, categories: $categories, dueDate: $dueDate, status: $status, createdAt: $createdAt, updatedAt: $updatedAt)';
   }
 
   @override
@@ -247,6 +282,8 @@ class _$TaskImpl extends _Task {
             (identical(other.title, title) || other.title == title) &&
             (identical(other.description, description) ||
                 other.description == description) &&
+            (identical(other.categories, categories) ||
+                other.categories == categories) &&
             (identical(other.dueDate, dueDate) || other.dueDate == dueDate) &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.createdAt, createdAt) ||
@@ -256,8 +293,8 @@ class _$TaskImpl extends _Task {
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, id, title, description, dueDate,
-      status, createdAt, updatedAt);
+  int get hashCode => Object.hash(runtimeType, id, title, description,
+      categories, dueDate, status, createdAt, updatedAt);
 
   @JsonKey(ignore: true)
   @override
@@ -271,6 +308,7 @@ abstract class _Task extends Task {
       {required final int id,
       required final TaskTitle title,
       required final String description,
+      final Categories? categories,
       final String? dueDate,
       final TaskStatus status,
       required final DateTime createdAt,
@@ -289,6 +327,10 @@ abstract class _Task extends Task {
 
   /// 説明
   String get description;
+  @override
+
+  /// カテゴリ一覧
+  Categories? get categories;
   @override
 
   /// 期限日
