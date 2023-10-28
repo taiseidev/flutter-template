@@ -3,17 +3,17 @@ import 'package:taskly/utils/shared_preference/shared_preference.dart';
 enum PreferenceKeyType { theme }
 
 extension PreferenceKeyTypeEx on PreferenceKeyType {
-  String get keyString {
+  String get _keyString {
     return switch (this) {
       PreferenceKeyType.theme => PreferenceKeyType.theme.name,
     };
   }
 
-  Future<bool> setBool({required bool setBool}) async {
-    return SharedPreferencesInstance().prefs.setBool(keyString, setBool);
+  String getString() {
+    return SharedPreferencesInstance().prefs.getString(_keyString) ?? '';
   }
 
-  bool getBool() {
-    return SharedPreferencesInstance().prefs.getBool(keyString) ?? false;
+  Future<bool> setString({required String value}) async {
+    return SharedPreferencesInstance().prefs.setString(_keyString, value);
   }
 }

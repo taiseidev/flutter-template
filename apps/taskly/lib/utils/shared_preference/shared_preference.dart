@@ -10,7 +10,7 @@ class SharedPreferencesInstance {
   static final SharedPreferencesInstance _instance =
       SharedPreferencesInstance._internal();
 
-  static Future<void> initialize() async {
+  static Future<void> init() async {
     _prefs = await SharedPreferences.getInstance();
   }
 }
