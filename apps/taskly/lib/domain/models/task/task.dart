@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:taskly/domain/models/task_title.dart';
+import 'package:taskly/domain/models/task/task_title.dart';
 
 part 'task.freezed.dart';
 
