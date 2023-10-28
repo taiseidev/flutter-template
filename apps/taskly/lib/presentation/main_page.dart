@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
+import 'package:taskly/presentation/pages/setting_page.dart';
 import 'package:taskly/presentation/pages/todo_list_page.dart';
 
 part 'main_page.g.dart';
@@ -18,7 +19,7 @@ class MainPage extends ConsumerWidget {
 
   static const _pages = [
     TodoListPage(),
-    Text('設定'),
+    SettingPage(),
   ];
 
   static const _items = [
